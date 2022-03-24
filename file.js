@@ -1,10 +1,14 @@
 /// to write and create file
 
+
+// to create a single file via node.js
+
+
 // const fs = require("fs");
 
 // const quote2 = "earn better is good for all";
 
-// to create a single file via node.js
+
 
 // fs.writeFile("./hai.html", quote2, (err) => {
 //   console.log("completed writing !!!");
@@ -24,11 +28,33 @@
 
 /// to read file
 
-const fs = require("fs");
+// const fs = require("fs");
 
-fs.readFile("./dude.txt", "utf8", (err, content) => {
-  if (err) {
-    console.log("file not found ", err);
-  }
-  console.log("quote", content);
-});
+// fs.readFile("./dude.txt", "utf-8", (err, content) => {
+//   if (err) {
+//     console.log("file not found ", err);
+//   }
+//   console.log("quote", content);
+// });
+
+
+/// to update the content in existing file using node.js
+
+
+//  const fs = require("fs");
+
+// const quote2 = "\n earn better it'  s good for all";
+
+
+
+//  fs.appendFile("./dude.txt", quote2, (err) => {
+//    console.log("completed writing !!!");
+//  });
+
+/// to delete the  existing file using node.js
+
+ const fs = require("fs");
+
+ fs.unlink("./sum.js",err=> {
+   console.log("File Deleted !!!")
+ })
