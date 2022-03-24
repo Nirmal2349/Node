@@ -53,8 +53,17 @@
 
 /// to delete the  existing file using node.js
 
- const fs = require("fs");
+//  const fs = require("fs");
 
- fs.unlink("./sum.js",err=> {
-   console.log("File Deleted !!!")
- })
+//  fs.unlink("./sum.js",err=> {
+//    console.log("File Deleted !!!")
+//  })
+
+/// to delete the  existing file inside other folder using node.js
+
+
+const fs = require("fs");
+
+fs.readdir("./backup", (err, files) => {
+  // console.log(files);
+  files.forEach((fileName) =>fs.unlink(`./backup/${fileName}`, (err) => {console.log("Deleted file!!! ✨");}));});
