@@ -1,14 +1,10 @@
 /// to write and create file
 
-
 // to create a single file via node.js
-
 
 // const fs = require("fs");
 
 // const quote2 = "earn better is good for all";
-
-
 
 // fs.writeFile("./hai.html", quote2, (err) => {
 //   console.log("completed writing !!!");
@@ -37,15 +33,11 @@
 //   console.log("quote", content);
 // });
 
-
 /// to update the content in existing file using node.js
-
 
 //  const fs = require("fs");
 
 // const quote2 = "\n earn better it'  s good for all";
-
-
 
 //  fs.appendFile("./dude.txt", quote2, (err) => {
 //    console.log("completed writing !!!");
@@ -61,9 +53,13 @@
 
 /// to delete the  existing file inside other folder using node.js
 
-
 const fs = require("fs");
 
 fs.readdir("./backup", (err, files) => {
   // console.log(files);
-  files.forEach((fileName) =>fs.unlink(`./backup/${fileName}`, (err) => {console.log("Deleted file!!! ✨");}));});
+  files.forEach((fileName) =>
+    fs.unlink(`./backup/${fileName}`, (err) => {
+      console.log("Deleted file!!! ✨");
+    })
+  );
+});
